@@ -57,7 +57,7 @@ public class MainActivity extends AppCompatActivity {
         waitlistRecyclerView.setAdapter(mAdapter);
 
 
-        // COMPLETED (3) Create a new ItemTouchHelper with a SimpleCallback that handles both LEFT and RIGHT swipe directions
+        
         // Create an item touch helper to handle swiping items off the list
         new ItemTouchHelper(new ItemTouchHelper.SimpleCallback(0, ItemTouchHelper.LEFT | ItemTouchHelper.RIGHT) {
 
@@ -68,7 +68,7 @@ public class MainActivity extends AppCompatActivity {
                 return false;
             }
 
-            // COMPLETED (5) Override onSwiped
+    
             @Override
             public void onSwiped(RecyclerView.ViewHolder viewHolder, int swipeDir) {
                 // COMPLETED (8) Inside, get the viewHolder's itemView's tag and store in a long variable id
@@ -82,7 +82,7 @@ public class MainActivity extends AppCompatActivity {
                 mAdapter.swapCursor(getAllGuests());
             }
 
-            //COMPLETED (11) attach the ItemTouchHelper to the waitlistRecyclerView
+           
         }).attachToRecyclerView(waitlistRecyclerView);
 
     }
@@ -152,7 +152,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-    // COMPLETED (1) Create a new function called removeGuest that takes long id as input and returns a boolean
     /**
      * Removes the record with the specified id
      *
